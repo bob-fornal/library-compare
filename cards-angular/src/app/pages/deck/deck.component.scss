@@ -1,0 +1,15 @@
+
+.deck-wrapper {
+  height: 100vh;
+  display: grid;
+}
+.stacked-deck {
+  margin: auto;
+  position: relative
+}
+
+.deck-card {
+  position: absolute;
+  top: -3px;
+  left: -3px;
+}

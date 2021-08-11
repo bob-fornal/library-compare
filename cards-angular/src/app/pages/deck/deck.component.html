@@ -1,0 +1,16 @@
+
+<div class="deck-wrapper">
+  <span class="stacked-deck">
+    <single-card
+      class="deck-card"
+      [back]="back"
+      [front]="back"
+      [path]="path"></single-card>
+    <single-card
+      [back]="back"
+      [front]="topCardFront"
+      [path]="path"
+      [show]="topCardShow"
+      [onVisibleClick]="onVisibleClickFn"></single-card>
+  </span>  
+</div>

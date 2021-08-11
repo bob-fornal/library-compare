@@ -1,0 +1,8 @@
+
+<div class="cards-wrapper">
+  <div *ngFor="let type of cards" class="type-of-card">
+    <ng-container *ngFor="let card of type">
+      <single-card [back]="back" [front]="card" [path]="path" [show]="show"></single-card>
+    </ng-container>
+  </div>
+</div>
