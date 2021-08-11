@@ -47,7 +47,6 @@ export class DeckComponent {
   };
 
   setTopCard = () => {
-    console.log(this.topCardIndex, this.cards[this.topCardIndex]);
     this.topCardFront = this.cards[this.topCardIndex];
     this.topCardShow = false;
   };
