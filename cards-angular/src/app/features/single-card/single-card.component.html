@@ -2,7 +2,7 @@
 <div class="card"
   [class.disabled]="disabled === true"
   [class.show]="disabled === false && show === true"
-  (click)="disabled === false && toggleShow()">
+  (click)="toggleShow()">
   <div class="content">
     <img [src]="getFront()" class="front" />
     <img [src]="getBack()" class="back" />

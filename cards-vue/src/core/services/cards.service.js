@@ -8,7 +8,6 @@ class CardsService {
  
   getCardsConfig = async () => {
     const url = config.paths.cards;
-    console.log(url);
     return (await axios.get(url)).data;
   }
 }

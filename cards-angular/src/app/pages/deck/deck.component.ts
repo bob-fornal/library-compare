@@ -41,9 +41,7 @@ export class DeckComponent {
       });
     });
 
-    console.log(cards);
     this.cards = this.shuffler.shuffle(cards);
-    console.log(this.cards);
 
     this.setTopCard();
   };

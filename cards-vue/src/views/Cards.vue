@@ -5,6 +5,7 @@
     <div v-for="(type, index) in cards" :key="index">
       <span v-for="(card, cardIndex) in type" :key="cardIndex">
         <SingleCard
+          v-on:triggerParent="triggerCardClick"
           v-bind:back="back"
           v-bind:front="card"
           v-bind:path="path"
@@ -27,12 +28,13 @@ export default {
     return {
       cards: [],
       path: '',
-      back: ''
+      back: '',
+
+      triggerCardClick: () => {}
     }
   },
   async mounted () {
     const { cards, path, back } = await getConfig();
-    console.log(cards);
     
     this.cards = cards;
     this.path = path;

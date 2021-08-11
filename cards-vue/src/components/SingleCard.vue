@@ -1,11 +1,11 @@
 
 <template>
   <div class="card"
-    :class="{ show: showFront }"
-    v-on:click="showFront = !showFront">
+    :class="{ show: (disabled === false && showFront === true), disabled: (disabled) }"
+    v-on:click=toggleShow()>
     <div class="content">
-      <img :src=getFront() class="front" />
-      <img :src=getBack() class="back" />
+      <img :src="fullFront" class="front" />
+      <img :src="fullBack" class="back" />
     </div>
   </div>
 </template>
@@ -19,13 +19,37 @@ export default {
     path: String,
     show: Boolean
   },
+  watch: {
+    path: function (value) {
+      this.fullBack = value + this.back;
+      this.fullFront = value + this.front;
+    },
+    back: function (value) {
+      this.fullBack = this.path + value;
+      this.disabled = this.back === this.front;
+    },
+    front: function (value) {
+      this.fullFront = this.path + value;
+      this.disabled = this.back === this.front;
+    }
+  },
   data () {
     return {
       disabled: true,
       showFront: this.show,
+      fullBack: this.path + this.back,
+      fullFront: this.path + this.front,
 
-      getBack: () => this.path + this.back,
-      getFront: () => this.path + this.front
+      toggleShow: () => {
+        if (this.disabled === true) return;
+        this.showFront = !this.showFront;
+        if (this.showFront === false) {
+          this.handleOnVisibleClick();
+        }
+      },
+      handleOnVisibleClick: () => {
+        this.$emit('triggerParent', '');
+      }
     };
   },
   mounted () {
@@ -64,6 +88,7 @@ export default {
 .front,
 .back {
   position: absolute;
+  left: 0;
   height: 100%;
   width: 100%;
   background: white;
