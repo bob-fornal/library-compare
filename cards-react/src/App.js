@@ -1,23 +1,25 @@
-import logo from './logo.svg';
+
 import './App.css';
 
+import React, { useState } from 'react';
+
+import Header from './shared/header/Header.js';
+import Cards from './pages/cards/Cards.js';
+
 function App() {
+  let [showPage, setPage] = useState('cards');
+
+  const handlePageChange = (page) => {
+    setPage(page);
+  };
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header onPageChange={ handlePageChange } />
+      <div className="content">
+        { showPage === 'cards' ? <Cards /> : null }
+        { showPage === 'deck' ? 'deck' : null }
+      </div>
     </div>
   );
 }
