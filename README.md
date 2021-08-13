@@ -1,6 +1,6 @@
 # library-compare
 
-![Cards Cover Image](Cover Image.png)
+![Cards Cover Image](Cover-Image.png)
 
 ## Concept
 
