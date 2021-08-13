@@ -16,7 +16,7 @@ function App() {
   return (
     <div className="App">
       <Header onPageChange={ handlePageChange } />
-      <div className="content">
+      <div className="content--wrapper">
         { showPage === 'cards' ? <Cards /> : null }
         { showPage === 'deck' ? 'deck' : null }
       </div>

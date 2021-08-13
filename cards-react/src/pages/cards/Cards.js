@@ -1,7 +1,7 @@
 
 import './Cards.css';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import api from '../../core/services/api.js';
 
@@ -12,8 +12,6 @@ function Cards() {
   const [cards, setCards] = useState([]);
   const [path, setPath] = useState('');
   const [back, setBack] = useState('');
-
-  const [initialized, setInitialized] = useState(false);
 
   const processCards = (structure) => {
     let cards = [];
@@ -35,28 +33,24 @@ function Cards() {
   };
 
   const initialize = () => {
-    if (initialized === true) return;
-    setInitialized(true);
-
-    api.get('cards.json')
-    .then(response => {
+    api.get('cards.json').then(response => {
       const structure = response.data;
       processCards(structure);
-    })
-    .catch(error => {
+    }).catch(error => {
       console.log(error);
     });
   };
-  initialize();
+
+  useEffect(initialize, []);
 
   return (
-    <React.Fragment>
+    <div className="type-of-card">
       { cards.map((type, indexType) => (<div key={ `type-${ indexType }` }>
         { type.map((card, indexCard) =>
-          <SingleCard key={ `card-${ indexCard }` } path={ path } front={ card } back={ back }  />
+          <SingleCard key={ `card-${ indexCard }` } path={ path } front={ card } back={ back } show={ false }  />
         ) }
       </div>) ) }
-    </React.Fragment>
+    </div>
   );
 }
 
