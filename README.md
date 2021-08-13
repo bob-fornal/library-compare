@@ -1,5 +1,7 @@
 # library-compare
 
+![Cards Cover Image](Cover Image.png)
+
 ## Concept
 
 Basically, I want to explore the various:
