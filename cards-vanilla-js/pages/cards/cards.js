@@ -7,7 +7,6 @@ core.processCards = () => {
   core.data.path = '/assets/images/';
   core.data.back = core.structure.back + core.structure.format;
 
-  console.log(core.structure);
   core.structure.type.forEach(cardType => {
     let type= [];
     core.structure.descriptor.forEach(desc => {

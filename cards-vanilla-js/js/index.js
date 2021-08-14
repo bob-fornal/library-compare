@@ -26,21 +26,26 @@ core.getStructure = () => {
         core.displayCards();
         break;
       case (core.type === 'deck'):
-        // process deck
+        core.processDeck();
+        core.displayDeck();
         break;
     }
   });
 };
 
+core.getId = (id) => id.replace('.', '--');
+
 core.singleCard = (params) => {
   const disabled = (params.hasOwnProperty('disabled') && params.disabled === true);
   const show = (params.hasOwnProperty('show') && params.show === true);
+  const hasClass = params.hasOwnProperty('class');
 
   const front = core.data.path + params.front;
   const back = core.data.path + params.back;
   
-  const id = params.front.replace('.', '--');
+  const id = core.getId(params.front);
   const classes = [ 'card' ];
+  if (hasClass === true) classes.push(params.class);
   if (disabled === true) classes.push('disabled');
   if (show === true) classes.push('show');
 
@@ -73,7 +78,7 @@ core.toggleShow = (event) => {
   const element = $('#' + id);
   if (core.ids[id].disabled === true) return;
   element.toggleClass('show');
-  if (element.hasClass('show')) {
-    console.log('show triggered');
+  if (element.hasClass('show') === false) {
+    core.ids[id].onVisibleClick(id);
   }
 };
