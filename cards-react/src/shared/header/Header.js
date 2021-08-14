@@ -1,15 +1,14 @@
 
 import './Header.css';
 
-function Header(props) {
+import { Link } from 'react-router-dom'
 
-  const handleClickCards = () => props.onPageChange('cards');
-  const handleClickDeck = () => props.onPageChange('deck');
+function Header() {
 
   return (
     <div className="header toolbar">
-      <button className="item" onClick={ handleClickCards }>Cards</button>
-      <button className="item" onClick={ handleClickDeck }>Deck</button>
+      <Link className="item" to='/'>Cards</Link>
+      <Link className="item" to='/deck'>Deck</Link>
     </div>
   );
 }

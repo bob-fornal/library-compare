@@ -21,12 +21,18 @@ function SingleCard(props) {
     } else if (show === true) {
       names.push('show');
     }
+    if (props.hasOwnProperty('addClass')) {
+      names.push(props.addClass);
+    }
     return names.join(' ');
   };
 
   const toggleShow = () => {
+    if (props?.disabled === true) return;
     setShow(!show);
-    console.log(show);
+    if (show === false && props.hasOwnProperty('onVisibleClick')) {
+      props.onVisibleClick();
+    }
   };
 
   return (

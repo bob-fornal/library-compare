@@ -19,8 +19,6 @@ export class DeckComponent {
   topCardFront: string = '';
   topCardShow: boolean = false;
 
-  show: boolean = false;
-
   constructor(
     public cardsService: CardsService,
     public shuffler: ShufflerService
@@ -29,12 +27,12 @@ export class DeckComponent {
   }
 
   init = async () => {
+    let cards: Array<string> = [];
     const structure: any = await this.cardsService.getCardsConfig();
     
     this.path = '/assets/images/';
     this.back = structure.back + structure.format;
 
-    let cards: Array<string> = [];
     structure.type.forEach((cardType: string) => {
       structure.descriptor.forEach((desc: string) => {
         cards.push(`${ cardType }-${ desc }${ structure.format }`);
