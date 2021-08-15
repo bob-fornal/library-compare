@@ -36,13 +36,14 @@ The core logic was complex enough to use several parts of the frameworks, but si
 | SIZES | | | | |
 | => Code (assets 4.2m) | 0.5m | 1.4m | 0.3m | 0.2m |
 | => Build (assets 4.2m) | 0.3m + assets | 0.8m + assets | 1.2m + assets | 0.2m + assets |
+| Development Time | 8 Hours | 8 Hours | 8 Hours | 3 Hours |
 | Setup Process | `ng new <project-name>` | `vue create <project-name>` | `npx create-react-app <project-name>` | Manual |
 | CODE MANAGEMENT | | | | |
 | => Routing | Angular Router | React Router | Vue Router | Folder / File Structure |
 | => Binding Props | [attribute] | attribute={} | :attribute="" | Manual |
 | => Binding Events | (click)="" | onClick={} | v-on:click=fn() | Manual (jQuery) |
 | => Services | baked-in | import class | import class | import class |
-| => Referencing Assets | http-get, import | http-get | http-get | Manual |
+| => Referencing Assets | http-get, import | http-get, import | http-get, import | Manual |
 | Unit Testing | baked-in (`ng generate [type] [location]`) | simple example | Manual | Manual |
 
 ## Angular
