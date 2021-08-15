@@ -19,7 +19,7 @@ Basically, I want to explore the various:
 4. Unit Testing
 5. Code Execution (Build Process and Size)
 
-To do this, four separate builds of the same project were done. There were three "frameworks":
+To do this, four separate builds of the same project were implemented. There were three "frameworks":
 
 1. Angular
 2. React
