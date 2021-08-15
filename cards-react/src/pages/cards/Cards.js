@@ -3,9 +3,9 @@ import './Cards.css';
 
 import React, { useState, useEffect } from 'react';
 
-import api from '../../core/services/api.js';
+import api from '@core/services/api.js';
 
-import SingleCard from '../../shared/single-card/SingleCard.js';
+import SingleCard from '@shared/single-card/SingleCard.js';
 
 function Cards() {
 

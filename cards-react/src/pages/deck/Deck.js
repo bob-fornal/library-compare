@@ -3,10 +3,10 @@ import './Deck.css';
 
 import React, { useState, useEffect } from 'react';
 
-import api from '../../core/services/api.js';
-import shuffler from '../../core/services/shuffler.service.js';
+import api from '@core/services/api.js';
+import shuffler from '@core/services/shuffler.service.js';
 
-import SingleCard from '../../shared/single-card/SingleCard.js';
+import SingleCard from '@shared/single-card/SingleCard.js';
 
 function Deck() {
 
