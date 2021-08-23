@@ -34,10 +34,15 @@ The core logic was complex enough to use several parts of the frameworks, but si
 | Category      | Angular | React | Vue | Vanilla-JavaScript |
 |---------------|---------|-------|-----|--------------------|
 | SIZES | | | | |
-| => Code (assets 4.2m) | 19k | 28k | 21k | 232k |
-| => Build (assets 4.2m) | 273k + assets | 760k + assets | 1.3m + assets | --- |
-| Development Time | 8 Hours | 8 Hours | 8 Hours | 3 Hours |
-| Version | 12.2.0 | 17.0.2 | 4.5.3 | --- |
+| => Code (assets 4.2M) | 19k | 28k | 21k | 232k |
+| => Build (assets 4.2M) | 273k + assets | 760k + assets | 1.3M + assets | --- |
+| => Development Time | 8 Hours | 8 Hours | 8 Hours | 3 Hours |
+| => Version | 12.2.0 | 17.0.2 | 4.5.3 | --- |
+| LOADING | | | | |
+| => Transferred | 25.7k | 19.9k | 16.5k | 4.3M |
+| => Resources | 7M | 6.2M | 7.7M | 4.3M |
+| => Load Time | 705-740ms | 750-826ms | 640-654ms | 859-872ms |
+| => DOM Loaded | 411-441ms | 293-327ms | 403-424ms | 255-260ms |
 | Setup Process | `ng new <project-name>` | `vue create <project-name>` | `npx create-react-app <project-name>` | Manual |
 | CODE MANAGEMENT | | | | |
 | => Routing | Angular Router | React Router | Vue Router | Folder / File Structure |
