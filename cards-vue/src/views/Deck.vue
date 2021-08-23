@@ -22,9 +22,9 @@
 </template>
 
 <script>
-import CardsService from '../core/services/cards.service.js';
-import ShufflerService from '../core/services/shuffler.service.js';
-import SingleCard from '../components/SingleCard.vue';
+import CardsService from '@Core/services/cards.service.js';
+import ShufflerService from '@Core/services/shuffler.service.js';
+import SingleCard from '@Components/SingleCard.vue';
 
 export default {
   name: 'Deck',

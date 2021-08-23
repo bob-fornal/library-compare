@@ -1,8 +1,8 @@
 
 import { createRouter, createWebHashHistory } from 'vue-router';
 
-import Cards from '../views/Cards.vue';
-import Deck from '../views/Deck.vue';
+import Cards from '@Views/Cards.vue';
+import Deck from '@Views/Deck.vue';
 
 const routes = [
   { path: '/', redirect: "/cards" },

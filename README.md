@@ -34,9 +34,10 @@ The core logic was complex enough to use several parts of the frameworks, but si
 | Category      | Angular | React | Vue | Vanilla-JavaScript |
 |---------------|---------|-------|-----|--------------------|
 | SIZES | | | | |
-| => Code (assets 4.2m) | 0.5m | 1.4m | 0.3m | 0.2m |
-| => Build (assets 4.2m) | 0.3m + assets | 0.8m + assets | 1.2m + assets | 0.2m + assets |
+| => Code (assets 4.2m) | 19k | 28k | 21k | 232k |
+| => Build (assets 4.2m) | 273k + assets | 760k + assets | 1.3m + assets | --- |
 | Development Time | 8 Hours | 8 Hours | 8 Hours | 3 Hours |
+| Version | 12.2.0 | 17.0.2 | 4.5.3 | --- |
 | Setup Process | `ng new <project-name>` | `vue create <project-name>` | `npx create-react-app <project-name>` | Manual |
 | CODE MANAGEMENT | | | | |
 | => Routing | Angular Router | React Router | Vue Router | Folder / File Structure |
@@ -87,7 +88,11 @@ Built-in Unit Testing, as well as E2E testing. The CLI includes these as `ng gen
 
 ### Code Execution
 
-Build and Size
+Build and Size:
+
+* Code: 19k
+* Build: 273k + assets
+* DEV Time: 8 Hours
 
 ## React
 
@@ -126,6 +131,10 @@ This configuration allows for a VERY clean Unit Test and E2E Testing environment
 
 Build and Size
 
+* Code: 28k
+* Build: 760k + assets
+* DEV Time: 8 Hours
+
 ## Vue
 
 VERSION: 4.5.13
@@ -141,7 +150,7 @@ npm install -g @vue/cli @vue/cli-service-global
 The CLI can be updated via `npm update` ...
 
 ```script
-npm updatre @vue/cli @vue/cli-service-global
+npm update @vue/cli @vue/cli-service-global
 ```
 
 ### Setup Processes
@@ -169,6 +178,10 @@ No tests provided for the base installation.
 
 Build and Size
 
+* Code: 21k
+* Build: 1.3M + assets
+* DEV Time: 8 Hours
+
 ## Vanilla JavaScript
 
 VERSION: none
@@ -192,3 +205,7 @@ No tests.
 ### Code Execution
 
 Build and Size
+
+* Code: 232k
+* Build: ---
+* DEV Time: 3 Hours

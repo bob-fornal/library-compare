@@ -1,6 +1,6 @@
 
 import axios from 'axios';
-import config from '../constants/config.json';
+import config from '@Core/constants/config.json';
 
 class CardsService {
 
