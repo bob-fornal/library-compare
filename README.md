@@ -33,18 +33,21 @@ The core logic was complex enough to use several parts of the frameworks, but si
 
 | Category      | Angular | React | Vue | Vanilla-JavaScript |
 |---------------|---------|-------|-----|--------------------|
-| SIZES | | | | |
-| => Code (assets 4.2M) | 19k | 28k | 21k | 232k |
-| => Build (assets 4.2M) | 273k + assets | 760k + assets | 1.3M + assets | --- |
-| => Development Time | 8 Hours | 8 Hours | 8 Hours | 3 Hours |
-| => Version | 12.2.0 | 17.0.2 | 4.5.3 | --- |
-| LOADING | | | | |
-| => Transferred | 25.7k | 19.9k | 16.5k | 4.3M |
-| => Resources | 7M | 6.2M | 7.7M | 4.3M |
-| => Load Time | 705-740ms | 750-826ms | 640-654ms | 859-872ms |
-| => DOM Loaded | 411-441ms | 293-327ms | 403-424ms | 255-260ms |
+| Code (assets 4.2M) | 19k | 28k | 21k | 232k |
+| Build (assets 4.2M) | 273k + assets | 760k + assets | 1.3M + assets | --- |
+| Development Time | 8 Hours | 8 Hours | 8 Hours | 3 Hours |
+| Version | 12.2.0 | 17.0.2 | 4.5.3 | --- |
+
+| Category      | Angular | React | Vue | Vanilla-JavaScript |
+|---------------|---------|-------|-----|--------------------|
+| Transferred | 25.7k | 19.9k | 16.5k | 4.3M |
+| Resources | 7M | 6.2M | 7.7M | 4.3M |
+| Load Time | 705-740ms | 750-826ms | 640-654ms | 859-872ms |
+| DOM Loaded | 411-441ms | 293-327ms | 403-424ms | 255-260ms |
+
+| Category      | Angular | React | Vue | Vanilla-JavaScript |
+|---------------|---------|-------|-----|--------------------|
 | Setup Process | `ng new <project-name>` | `vue create <project-name>` | `npx create-react-app <project-name>` | Manual |
-| CODE MANAGEMENT | | | | |
 | => Routing | Angular Router | React Router | Vue Router | Folder / File Structure |
 | => Binding Props | [attribute] | attribute={} | :attribute="" | Manual |
 | => Binding Events | (click)="" | onClick={} | v-on:click=fn() | Manual (jQuery) |
@@ -99,6 +102,18 @@ Build and Size:
 * Build: 273k + assets
 * DEV Time: 8 Hours
 
+### Lighthouse Information
+
+Performance: 71
+
+* Time To Interactive: 3.0s
+* Total Blocking Time: 170ms
+* First Contentful Paint: 0.4s
+* Speed Index: 0.7s
+* Largest Contentful Paint: 5.2s
+
+Best Practices: 93
+
 ## React
 
 VERSION: 17.0.2
@@ -139,6 +154,19 @@ Build and Size
 * Code: 28k
 * Build: 760k + assets
 * DEV Time: 8 Hours
+
+### Lighthouse Information
+
+
+Performance: 79
+
+* Time To Interactive: 1.0s
+* Total Blocking Time: 20ms
+* First Contentful Paint: 0.9s
+* Speed Index: 0.9s
+* Largest Contentful Paint: 3.4s
+
+Best Practices: 100
 
 ## Vue
 
@@ -187,6 +215,18 @@ Build and Size
 * Build: 1.3M + assets
 * DEV Time: 8 Hours
 
+### Lighthouse Information
+
+Performance: 46
+
+* Time To Interactive: 3.4s
+* Total Blocking Time: 10ms
+* First Contentful Paint: 3.2s
+* Speed Index: 3.2s
+* Largest Contentful Paint: 5.7s
+
+Best Practices: 87
+
 ## Vanilla JavaScript
 
 VERSION: none
@@ -214,3 +254,15 @@ Build and Size
 * Code: 232k
 * Build: ---
 * DEV Time: 3 Hours
+
+### Lighthouse Information
+
+Performance: 95
+
+* Time To Interactive: 0.6s
+* Total Blocking Time: 0ms
+* First Contentful Paint: 0.6s
+* Speed Index: 0.6s
+* Largest Contentful Paint: 1.5s
+
+Best Practices: 93
