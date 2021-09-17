@@ -35,5 +35,8 @@ export class CardsComponent {
       this.cards.push(type);
     });
   };
+  
+  trackByType = (index: number, type: Array<string>): number => index;
+  trackByCard = (index: number, card: string): string => card;
 
 }
