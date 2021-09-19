@@ -79,6 +79,6 @@ core.toggleShow = (event) => {
   if (core.ids[id].disabled === true) return;
   element.toggleClass('show');
   if (element.hasClass('show') === false) {
-    core.ids[id].onVisibleClick(id);
+    core.ids[id]?.onVisibleClick(id);
   }
 };
