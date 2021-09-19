@@ -5,6 +5,6 @@ if (core === undefined) {
 
 core.header = {
   init: () => {
-    $('#header').load('../shared/header.html');
+    $('#header').load('../../shared/header.html');
   }
 };
