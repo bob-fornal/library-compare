@@ -78,7 +78,7 @@ core.toggleShow = (event) => {
   const element = $('#' + id);
   if (core.ids[id].disabled === true) return;
   element.toggleClass('show');
-  if (element.hasClass('show') === false) {
-    core.ids[id]?.onVisibleClick(id);
+  if (element.hasClass('show') === false && typeof core.ids[id].onVisibleClick === 'function') {
+    core.ids[id].onVisibleClick(id);
   }
 };
