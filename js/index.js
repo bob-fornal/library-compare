@@ -18,7 +18,7 @@ core.init = (type = 'cards') => {
 };
   
 core.getStructure = () => {
-  $.get('/assets/cards.json', (response) => {
+  $.get('../assets/cards.json', (response) => {
     core.structure = response;
     switch (true) {
       case (core.type === 'cards'):
